@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/Nav";
 import "./globals.css";
+import "./logo-overrides.css";
 
 export const metadata: Metadata = {
   title: "neonote. — small thoughts, kept well",
