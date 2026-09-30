@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPost, getPosts } from "@/lib/posts";
+import { findPost } from "@/lib/post-server";
 
-export function generateStaticParams() {
-  return getPosts().map((post) => ({ slug: post.slug }));
-}
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = await findPost(slug);
   if (!post) notFound();
 
   return <main className="reading wrap">
