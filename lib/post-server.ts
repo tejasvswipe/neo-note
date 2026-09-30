@@ -10,7 +10,7 @@ function fromDocument(doc: Record<string, unknown>): Post {
     excerpt: String(doc.excerpt),
     body: Array.isArray(doc.body) ? doc.body.map(String) : [],
     category: String(doc.category),
-    author: String(doc.author),
+    author: "Tejas",
     date: String(doc.date),
     readTime: String(doc.readTime),
     featured: Boolean(doc.featured),
