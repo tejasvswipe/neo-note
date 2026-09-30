@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     excerpt: data.excerpt,
     body: data.body.split("\n\n").filter(Boolean),
     category: data.category || "Notes",
-    author: data.author || "Mira Chen",
+    author: data.author || "Tejas",
     date: new Intl.DateTimeFormat("en-US", { month: "short", day: "2-digit", year: "numeric" }).format(new Date()),
     readTime: `${Math.max(1, Math.round(data.body.split(/\s+/).length / 180))} min read`,
   };
