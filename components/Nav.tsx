@@ -14,5 +14,5 @@ export function Nav() {
 }
 
 export function Footer() {
-  return <footer className="footer wrap"><span>© 2025 neonote</span><span>Made for slow internet thoughts.</span></footer>;
+  return <footer className="footer wrap"><span>neonote</span><span>Made for slow internet thoughts.</span></footer>;
 }
